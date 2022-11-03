@@ -6,7 +6,6 @@ Asana
 ### Loading Appropriate Packages
 
 ``` r
-suppressPackageStartupMessages(library("devtools"))
 suppressPackageStartupMessages(library("testthat"))
 ```
 
@@ -20,12 +19,12 @@ suppressPackageStartupMessages(library("testthat"))
 #' This function calculates for its user the percent they need on their final exam to get their desired final grade. It takes in the weight of different assignments in a course, the percent grade received on each of them,and the desired final course grade and returns what percent is need on the final to achieve that grade. If the percent needed is higher than 100% it will return "Oops! Better Luck Next Time :(". Note: the weight of the assignments and the assignment grades need to be inputted in the same order. 
 #' 
 #'
-#' @param AssignmentsWeigh 
+#' @param AssignmentsWeight 
 #' This variable takes in a numeric that represents the weight of the assignments completed by user. 
-#' Name justification: This argument is named AssignmentsWeigh because it takes in the percent value each assignment weighs.
+#' Name justification: This argument is named AssignmentsWeight because it takes in the percent value each assignment weighs.
 #' @param GradesRecieved 
 #' This variables takes in a numeric that represents the percentage received on the assignments.
-#' Name justification: This argument is named GradesRecieved because it takes in the percent value receieved on each assignment inputted into AssignmentsWeigh.
+#' Name justification: This argument is named GradesRecieved because it takes in the percent value receieved on each assignment inputted into AssignmentsWeight.
 #' @param DesiredFinalGrade 
 #' This argument takes in a numberic that the final percentage the user wants in the course. 
 #' Name justification: This argument is named DesiredFinalGrade because it takes in the final percent value the user wants in the course.
@@ -33,10 +32,10 @@ suppressPackageStartupMessages(library("testthat"))
 #' @return This function returns the percent needed on the final exam for the user to get their desired final grade in the course. If this value is greater than 100 it will return "Oops! Better Luck Next Time :("
 
 
-WhatGrade <- function(AssignmentsWeigh, GradesRecieved, DesiredFinalGrade) {
-  CurrentGrades <- AssignmentsWeigh*(GradesRecieved/100)
+WhatGrade <- function(AssignmentsWeight, GradesRecieved, DesiredFinalGrade) {
+  CurrentGrades <- AssignmentsWeight*(GradesRecieved/100)
   SumCurrentGrades <- sum(CurrentGrades)
-  FinalWeight <- 100 - sum(AssignmentsWeigh)
+  FinalWeight <- 100 - sum(AssignmentsWeight)
   GradeNeeded = ((DesiredFinalGrade-SumCurrentGrades)/FinalWeight) *100
   ifelse(GradeNeeded > 100, "Oops! Better Luck Next Time :(", paste0(GradeNeeded, "%"))
 }
@@ -112,7 +111,7 @@ will produce an *error*.
 WhatGrade("cat", 50,78)
 ```
 
-    ## Error in AssignmentsWeigh * (GradesRecieved/100): non-numeric argument to binary operator
+    ## Error in AssignmentsWeight * (GradesRecieved/100): non-numeric argument to binary operator
 
 # Exercise 4: Test the Function (25 points)
 
@@ -128,4 +127,4 @@ test_that("Basic Testing", {
 })
 ```
 
-    ## Test passed 😸
+    ## Test passed 🎉
