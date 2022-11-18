@@ -127,4 +127,4 @@ test_that("Basic Testing", {
 })
 ```
 
-    ## Test passed 🎉
+    ## Test passed 🌈

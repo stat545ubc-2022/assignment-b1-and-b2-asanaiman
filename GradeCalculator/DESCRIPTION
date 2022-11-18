@@ -1,0 +1,14 @@
+Package: GradeCalculator
+Title: Easy Grade Computation
+Version: 0.1.0
+Authors@R: 
+    person("Asana", "Imanpour", , "asanai@student.ubc.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Contains function 'whatGrade()' which gives you the final exam grade you need to achieve a certain grade on a course.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
