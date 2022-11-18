@@ -1,40 +1,60 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# GradeCalculator
+# gradecalculator
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of GradeCalculator is to give ‘whatGrade()’ which makes
-calculating the final exam grade you need to achieve a certain grade in
-a course easier.
+The goal of the **gradecalculator** package is to provide functions that
+allow students to calculate their course grades easily in different
+scenarios. For example, at what percent they currently stand in their
+course with the grades they have received thus far. This package
+currently only consists of one function, **‘what_grade()’**. This
+function makes calculating the final exam grade you need to achieve a
+certain grade in a course easier.
 
 ## Installation
 
-You can install the development version of GradeCalculator like so:
+You can install the development version of gradecalculator like so:
 
 ``` r
-library(devtools)
-install_github("stat545ubc-2022/assignment-b1-and-b2-asanaiman/GradeCalculator"))
-
-# Once package is downloaded can load the package and use!
-library(GradeCalculator)
+devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-asanaiman/buugradecalculator"))
 ```
+
+Once package is installed, to load the core gradecalculator and make it
+available in your current R session:
+
+``` r
+library(gradecalculator)
+```
+
+Now you can use the package!
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use the gradecalculator
+package:
 
-There are 5 assignments in the course worth 10%, 20%, 5%, 30%, 5% prior
-to the final exam. Student received 70%, 80%, 100%, 60%, 60%
-respectively and they want a final grade of 78%.
+A student is taking a course. There are 5 assignments in the course
+worth 10%, 20%, 5%, 30%, 5% prior to the final exam. The student
+received 70%, 80%, 100%, 60%, 60% respectively on the assignments. The
+student wants a final grade of 75% in the course and want to calculate
+what grade they need on the final exam to achieve this.
 
-***Note:*** *the weight of the assignments and the assignment grades
-need to be inputted in the same order.*
+| Assignment   | Weight of Assignment | Grade Received |
+|--------------|----------------------|----------------|
+| Assignment 1 | 10%                  | 70%            |
+| Midterm 1    | 20%                  | 80%            |
+| Quiz 1       | 5%                   | 100%           |
+| Midterm 2    | 30%                  | 60%            |
+| Quiz 2       | 5%                   | 60%            |
+
+***Note:*** *the weight of the assignments and the assignments grade
+received need to be inputted in the same order.*
 
 ``` r
-library(GradeCalculator)
-whatGrade(c(10, 20, 5, 30, 5), c(70, 80, 100, 60, 60), 78) 
-#> [1] "96.6666666666667%"
+library(gradecalculator)
+what_grade(c(10, 20, 5, 30, 5), c(70, 80, 100, 60, 60), 75) 
+#> [1] "86.6666666666667%"
 ```

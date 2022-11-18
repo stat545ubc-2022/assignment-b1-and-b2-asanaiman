@@ -1,10 +1,12 @@
-Package: GradeCalculator
+Package: gradecalculator
 Title: Easy Grade Computation
 Version: 0.1.0
 Authors@R: 
-    person("Asana", "Imanpour", , "asanai@student.ubc.ca", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Contains function 'whatGrade()' which gives you the final exam grade you need to achieve a certain grade on a course.
+    person("Asana", "Imanpour", , "asanai@student.ubc.ca", role = c("aut", "cre"))
+Description: The goal of the gradecalculator package is to provide functions that allow students to calculate their 
+    course grades easily in different scenarios. For example, at what percent they currently stand in their course with 
+    the grades they have received thus far. This package currently only consists of one function, 'what_grade()'. 
+    This function  makes calculating the final exam grade you need to achieve a certain grade in a course easier. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

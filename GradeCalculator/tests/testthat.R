@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(GradeCalculator)
+library(gradecalculator)
 
-test_check("GradeCalculator")
+test_check("gradecalculator")
