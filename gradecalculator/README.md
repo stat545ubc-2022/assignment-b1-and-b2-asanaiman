@@ -19,7 +19,7 @@ certain grade in a course easier.
 You can install the development version of gradecalculator like so:
 
 ``` r
-devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-asanaiman/buugradecalculator"))
+devtools::install_github("stat545ubc-2022/assignment-b1-and-b2-asanaiman/gradecalculator"))
 ```
 
 Once package is installed, to load the core gradecalculator and make it
